@@ -1,20 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalhes do Livro</title>
-    <link rel="stylesheet" href="styles.css"> 
+    <title>Detalhes do Livro - Cantinho do Leitor</title>
+    <!-- Carregamento do Tailwind CSS para estilo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f4f7fa; }
+        .cabecalho-principal { display: flex; align-items: center; justify-content: space-between; padding: 1rem; background-color: #ffffff; border-bottom: 2px solid #e5e7eb; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); }
+        .barra-pesquisa { display: flex; gap: 0.5rem; }
+        .campo-pesquisa { padding: 0.5rem; border: 1px solid #ccc; border-radius: 0.5rem; }
+        .botao { padding: 0.5rem 1rem; background-color: #4f46e5; color: white; border: none; border-radius: 0.5rem; cursor: pointer; transition: background-color 0.3s; }
+        .botao:hover { background-color: #4338ca; }
+        .conteudo-principal { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
+        .rodape { text-align: center; padding: 1.5rem; background-color: #1f2937; color: white; margin-top: 2rem; }
+        .redes-sociais a { margin: 0 0.5rem; color: #9ca3af; text-decoration: none; transition: color 0.3s; }
+        .redes-sociais a:hover { color: #4f46e5; }
+    </style>
 </head>
 <body>
-    
-    <main>
-        <div id="detalhes-livro">
+    <header class="cabecalho-principal">
+        <div class="logo">
+            <img src="https://placehold.co/150x50/4f46e5/ffffff?text=LOGO+LEITOR" width="150px" alt="Logo"> 
+        </div>
+        <div class="barra-pesquisa">
+            <input type="text" class="campo-pesquisa" placeholder="Buscar Livros...">
+            <button class="botao-pesquisa bg-indigo-600 hover:bg-indigo-700 text-white p-2 rounded-lg">🔎</button>
+            <button class="botao-limpar bg-gray-300 hover:bg-gray-400 text-gray-800 p-2 rounded-lg">🗑️</button>
+        </div>
+        <div class="botoes-login flex space-x-2">
+            <button class="botao bg-indigo-600 hover:bg-indigo-700">Login</button>
+            <button class="botao bg-green-500 hover:bg-green-600">Subscribe</button>
+            <button class="botao bg-gray-500 hover:bg-gray-600">Sobre nós</button>
+            <button class="botao bg-gray-500 hover:bg-gray-600">Sugestões</button>
+        </div>
+    </header>
+
+    <main class="conteudo-principal">
+        <!-- DIV OBRIGATÓRIA: O app.js injetará os detalhes do livro aqui -->
+        <div id="detalhes-livro" class="mt-8">
+            <div class="text-center p-8 bg-white rounded-xl shadow-lg">
+                <p class="text-gray-500">Carregando detalhes do item...</p>
             </div>
-        
-        <a href="index.html">← Voltar para a página inicial</a>
+        </div>
     </main>
 
-    <script src="app.js"></script> 
+    <footer class="rodape">
+        <p>&copy; 2024 Cantinho do Leitor</p>
+        <div class="redes-sociais">
+            <a href="#" target="_blank">Facebook</a>
+            <a href="#" target="_blank">Instagram</a>
+            <a href="#" target="_blank">Whatsapp</a>
+        </div>
+    </footer>
+    <!-- Link para o script que monta o conteúdo e a lógica -->
+    <script src="app.js"></script>
 </body>
 </html>
