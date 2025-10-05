@@ -3,11 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cantinho do Leitor</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="app.js" defer></script>
+    <script src="app.js"></script>
 </head>
 <body>
-    <h1>Olá mundo</h1>
+    <header class="cabecalho-principal">
+        <div class="logo">
+            <img src="img/Cantinho do Leitor Logo.jpg" width="150px" alt="Logo"> 
+        </div>
+        <div class="barra-pesquisa">
+            <input type="text" class="campo-pesquisa">
+            <button class="botao-pesquisa"></button>
+            <button class="botao-limpar"></button>
+        </div>
+        <div class="botoes-login">
+            <button class="botao">Login</button>
+            <button class="botao">Subscribe</button>
+            <button class="botao">Sobre nós</button>
+            <button class="botao"> Sugestões</button>
+        </div>
+    </header>
+
+    <main class="conteudo-principal">
+        <nav class="menu-lateral">
+            <ul class="lista-autores">
+                <li>Ali Hazelwood</li>
+                <li>Collen Hoover</li>
+                <li>Holly Black</li>
+                <li>Lynn Painter</li>
+                <li>Mona Kasten</li>
+                <li>Rebecca Ross</li>
+            </ul>
+        </nav>
+<section class="secao-bombando">
+            <div class="lista-artigos">
+                <article class="artigo-destaque">
+                <img src="https://picsum.photos/seed/picsum/200/300">
+                <h3>Resenhas de Livros</h3>
+                <p>Descubra qual será sua nova paixão.</p>
+                </article>
+            
+            <article class="artigo-destaque">
+                <img src="https://picsum.photos/seed/picsum/200/300">
+                <h3>Notícias Literárias</h3>
+                <p>Fique por dentro de todos os lançamentos de sua autora favorita.</p>
+            </article>
+            <article class="artigo-destaque">
+                <img src="https://picsum.photos/seed/picsum/200/300">
+                <h3>Veja o que está bombando!</h3>
+                <p>Descubra o que outras pesssoas estão curtindo.</p>
+            </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>&copy; Cantinho do Leitor</p>
+        <div class="redes-sociais">
+            <a href="#" target="_blank">Facebook</a>
+            <a href="#" target="_blank">Instagram</a>
+            <a href="#" target="_blank">Whatsapp</a>
+        </div>
+    </footer>
 </body>
 </html>
